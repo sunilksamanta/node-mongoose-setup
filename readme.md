@@ -1,5 +1,7 @@
 ![REST API Setup Nodejs MongoDB](https://dev-to-uploads.s3.amazonaws.com/i/zxvx4pk4tdlqyk1x2a4c.png)
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/25d8ccce7230ad5eb5c3/maintainability)](https://codeclimate.com/github/sunilksamanta/node-mongoose-setup/maintainability)
+
 With writing a very minimum line of code you’ll get an API ready. The project features —
 
 1. **Controller, Model & Service oriented architecture**
