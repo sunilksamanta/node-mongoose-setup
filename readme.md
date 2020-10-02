@@ -8,7 +8,7 @@ With writing a very minimum line of code you’ll get an API ready. The project 
 
 1. **User Module**
 
-1. **Post Module ** (Sample CRUD)
+1. **Post Module (Sample CRUD) **
 
 1. **Media Upload**
 
