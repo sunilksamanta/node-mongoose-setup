@@ -1,7 +1,7 @@
 ![REST API Setup Nodejs MongoDB](https://dev-to-uploads.s3.amazonaws.com/i/zxvx4pk4tdlqyk1x2a4c.png)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/25d8ccce7230ad5eb5c3/maintainability)](https://codeclimate.com/github/sunilksamanta/node-mongoose-setup/maintainability)
-
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](contributing.md)
 ## Installation
 
 Setup is super easy. Clone the repository - 

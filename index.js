@@ -6,3 +6,4 @@ const PORT = process.env.PORT || config.PORT;
 server.listen(PORT, () => {
   console.log(`Application running in ${config.MODE} Mode on port ${PORT}`);
 });
+module.exports = { server };
