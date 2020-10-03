@@ -3,6 +3,9 @@
 [![Build Status](https://travis-ci.org/sunilksamanta/node-mongoose-setup.svg?branch=master)](https://travis-ci.org/sunilksamanta/node-mongoose-setup)
 [![Maintainability](https://api.codeclimate.com/v1/badges/25d8ccce7230ad5eb5c3/maintainability)](https://codeclimate.com/github/sunilksamanta/node-mongoose-setup/maintainability)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](contributing.md)
+[![GitHub issues](https://img.shields.io/github/issues/sunilksamanta/node-mongoose-setup)](https://github.com/sunilksamanta/node-mongoose-setup/issues)
+[![GitHub stars](https://img.shields.io/github/stars/sunilksamanta/node-mongoose-setup)](https://github.com/sunilksamanta/node-mongoose-setup/stargazers)
+[![Twitter](https://img.shields.io/twitter/url?style=flat-square&url=https%3A%2F%2Fgithub.com%2Fsunilksamanta%2Fnode-mongoose-setup)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fsunilksamanta%2Fnode-mongoose-setup)
 ## Installation
 
 Setup is super easy. Clone the repository - 
