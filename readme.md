@@ -2,7 +2,48 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/25d8ccce7230ad5eb5c3/maintainability)](https://codeclimate.com/github/sunilksamanta/node-mongoose-setup/maintainability)
 
-With writing a very minimum line of code you’ll get an API ready. The project features —
+## Installation
+
+Setup is super easy. Clone the repository - 
+
+```shell script
+git clone https://github.com/sunilksamanta/node-mongoose-setup
+cd node-mongoose-setup
+npm install
+```
+
+Create an ``.env`` file at the root of your project with the following
+
+```dotenv
+MONGO_URL=YOUR_MONGO_URL
+DB_NAME=YOUR_DATABASE_NAME
+PORT=5000[YOUR_DESIRED_PORT]
+NODE_ENV=YOUR_APP_ENVIRONMENT[production/development]
+```
+
+Your project is ready. Now start the project.
+
+```shell script
+npm start
+```
+
+Go to ``http://localhost:5000``. You should see a default welcome page.
+
+Your API base path is ``http://localhost:5000/api``.
+
+First create some accounts to get started with the authentication.
+
+## Authentication
+
+JWT authentication is added in this project. User model is defined in models/User.js. 
+For Register, Login, Logout use these urls —
+```
+    [POST] api/auth/register
+    [POST] api/auth/login
+    [GET] api/auth/logout
+```
+
+## Features
 
 1. **Controller, Model & Service oriented architecture**
 
@@ -26,41 +67,41 @@ With writing a very minimum line of code you’ll get an API ready. The project 
 
 ## Directory Structure of the Project
 ```
-       ├─ .env
-       ├─ .gitignore
-       ├─ config
-       │  ├─ config.js
-       │  ├─ database.js
-       │  ├─ routes.js
-       │  └─ server.js
-       ├─ index.js
-       ├─ package.json
-       └─ src
-          ├─ controllers
-          │  ├─ AuthController.js
-          │  ├─ Controller.js
-          │  ├─ MediaController.js
-          │  └─ PostController.js
-          ├─ helpers
-          │  ├─ HttpError.js
-          │  ├─ HttpResponse.js
-          │  └─ Utility.js
-          ├─ models
-          │  ├─ Auth.js
-          │  ├─ Media.js
-          │  ├─ Post.js
-          │  └─ User.js
-          ├─ routes
-          │  ├─ auth.js
-          │  ├─ index.js
-          │  ├─ media.js
-          │  └─ post.js
-          └─ services
-             ├─ AuthService.js
-             ├─ MediaService.js
-             ├─ PostService.js
-             ├─ Service.js
-             └─ UserService.js
+├─ .env
+├─ .gitignore
+├─ config
+│  ├─ config.js
+│  ├─ database.js
+│  ├─ routes.js
+│  └─ server.js
+├─ index.js
+├─ package.json
+└─ src
+  ├─ controllers
+  │  ├─ AuthController.js
+  │  ├─ Controller.js
+  │  ├─ MediaController.js
+  │  └─ PostController.js
+  ├─ helpers
+  │  ├─ HttpError.js
+  │  ├─ HttpResponse.js
+  │  └─ Utility.js
+  ├─ models
+  │  ├─ Auth.js
+  │  ├─ Media.js
+  │  ├─ Post.js
+  │  └─ User.js
+  ├─ routes
+  │  ├─ auth.js
+  │  ├─ index.js
+  │  ├─ media.js
+  │  └─ post.js
+  └─ services
+     ├─ AuthService.js
+     ├─ MediaService.js
+     ├─ PostService.js
+     ├─ Service.js
+     └─ UserService.js
 ```
 ## Lets talk about the structure
 
@@ -88,7 +129,7 @@ There is a “Post” CRUD module included in this project for example.
 ## Overriding Base class method
 
 As an example if you see in the media Controller — the default delete method is overriden by its own class method as we have to delete the file from the file system also. So the overriden method is like bellow —
-```
+```js
 async delete(req, res, next) {
   const { id } = req.params;
   try {
@@ -111,19 +152,14 @@ async delete(req, res, next) {
   }
 }
 ```
-## Authentication
 
-JWT authentication is added in this project. User model is defined in models/User.js. 
-For Register, Login, Logout use these urls —
-```
-    [POST] api/auth/register
-    [POST] api/auth/login
-    [GET] api/auth/logout
-```
-
-## Have questions?
+## Have questions or suggestions?
 You can reply to this article [REST API Structure using NodeJS MongoDB (Mongoose)](https://medium.com/@sunilksamanta/rest-api-architecture-using-nodejs-mongodb-mongoose-64f9021c906f)
 
 ## Want to contribute?
 
-If you have any suggestion, feedback or you want to make this project more powerful — feel free to report issues or request a feature or suggest some changes. Fork and PR.
+If you have any suggestion, feedback or you want to make this project more powerful — feel free to report issues or request a feature or suggest some changes.
+
+Read the [Contributing guideline](contributing.md).
+
+
