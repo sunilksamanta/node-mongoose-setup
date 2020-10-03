@@ -162,4 +162,6 @@ If you have any suggestion, feedback or you want to make this project more power
 
 Read the [Contributing guideline](contributing.md).
 
+## License
 
+This project is licensed under the terms of the MIT license.
