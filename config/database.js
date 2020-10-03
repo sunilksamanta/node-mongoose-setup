@@ -9,7 +9,9 @@ class Connection {
     mongoose.set("useFindAndModify", false);
     mongoose.set("useCreateIndex", true);
     mongoose.set("useUnifiedTopology", true);
-    mongoose.connect(url);
+    mongoose.connect(url, err => {
+      console.error('MONGODB CONNECTION ERROR: ', err.message);
+    });
   }
 }
 
