@@ -164,4 +164,9 @@ Read the [Contributing guideline](contributing.md).
 
 ## License
 
-This project is licensed under the terms of the MIT license.
+This project is licensed under the terms of the [MIT](https://choosealicense.com/licenses/mit/) license.
+
+
+## Credit
+
+Special thanks to [@thisk8brd](https://github.com/thisk8brd/node-starter) for the concept of this API Structure.
