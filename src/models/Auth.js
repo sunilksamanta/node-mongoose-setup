@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 const  { Schema } = require("mongoose");
 const jwt = require("jsonwebtoken")
-
-const jwtKey = "RN3NG1N33R1NG";
+const config = require('../../config/config').getConfig();
+const jwtKey = config.JWT_SECRET;
 const jwtExpirySeconds = 172800;
 class Auth {
 
