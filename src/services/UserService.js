@@ -30,6 +30,6 @@ class UserService extends Service {
   async findByEmail(email, includePassword = false) {
     return includePassword? this.model.findByEmail(email).select('+password') : this.model.findByEmail(email);
   }
-};
+}
 
 module.exports = { UserService };

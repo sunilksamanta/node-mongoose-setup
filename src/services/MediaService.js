@@ -6,6 +6,6 @@ class MediaService extends Service {
     super(model);
   }
 
-};
+}
 
 module.exports = {MediaService};

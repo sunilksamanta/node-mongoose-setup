@@ -6,6 +6,6 @@ class PostService extends Service {
     super(model);
   }
 
-};
+}
 
 module.exports = {PostService};
