@@ -72,6 +72,8 @@ For Register, Login, Logout use these urls —
 
 1. **Autobind Methods**
 
+1. **Built in Pagination**
+
 ## Directory Structure of the Project
 ```
 ├─ .env
