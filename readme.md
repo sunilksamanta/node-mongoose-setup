@@ -16,14 +16,16 @@ cd node-mongoose-setup
 npm install
 ```
 
-Create an ``.env`` file at the root of your project with the following
+Create an ``.env`` file at the root of your project with the following.  
+
 
 ```dotenv
 MONGO_URL=YOUR_MONGO_URL
-DB_NAME=YOUR_DATABASE_NAME
 PORT=5000[YOUR_DESIRED_PORT]
 NODE_ENV=YOUR_APP_ENVIRONMENT[production/development]
 ```
+
+An example file `.env.example` is included.
 
 Your project is ready. Now start the project.
 

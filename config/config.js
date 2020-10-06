@@ -5,7 +5,6 @@ module.exports.getConfig = () => {
     MODE: 'Development',
     PORT: process.env.PORT || 5000,
     MONGO_URL: process.env.MONGO_URL,
-    DB_NAME: process.env.DB_NAME,
     UPLOAD_PATH: path.resolve(__dirname + '/../uploads')
   }
 
