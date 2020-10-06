@@ -1,6 +1,6 @@
-const { Controller } = require('./Controller');
-const { MediaService } = require("./../services/MediaService");
-const { Media } = require("./../models/Media");
+const {Controller} = require('./Controller');
+const {MediaService} = require("./../services/MediaService");
+const {Media} = require("./../models/Media");
 const autoBind = require('auto-bind');
 const multer = require('multer');
 const fs = require('fs');
@@ -12,22 +12,6 @@ const mediaService = new MediaService(
 const path = require('path');
 
 class MediaController extends Controller {
-
-    constructor(service) {
-        super(service);
-        autoBind(this);
-    }
-
-    async insert(req, res, next) {
-        try {
-            const uploadPath = config.UPLOAD_PATH;
-            req.file.path = req.file.path.split(uploadPath + "/")[1]
-            const response = await this.service.insert(req.file);
-            return res.status(response.statusCode).json(response);
-        } catch (e) {
-            next(e);
-        }
-    }
 
     //file upload using multer
     storage = multer.diskStorage({
@@ -45,6 +29,28 @@ class MediaController extends Controller {
             cb(null, (new Date()).getTime() + '-' + fileOriginalName);
         }
     });
+    upload = multer({
+        storage: this.storage,
+        limits: {
+            fileSize: 1024 * 1024 * 5
+        }
+    });
+
+    constructor(service) {
+        super(service);
+        autoBind(this);
+    }
+
+    async insert(req, res, next) {
+        try {
+            const uploadPath = config.UPLOAD_PATH;
+            req.file.path = req.file.path.split(uploadPath + "/")[1]
+            const response = await this.service.insert(req.file);
+            return res.status(response.statusCode).json(response);
+        } catch (e) {
+            next(e);
+        }
+    }
 
     fileFilter = (req, file, cb) => {
         // reject a file
@@ -55,16 +61,8 @@ class MediaController extends Controller {
         }
     };
 
-    upload = multer({
-        storage: this.storage,
-        limits: {
-            fileSize: 1024 * 1024 * 5
-        }
-    });
-
-
     async delete(req, res, next) {
-        const { id } = req.params;
+        const {id} = req.params;
         try {
             const response = await this.service.delete(id);
             // File Unlinking..
@@ -79,8 +77,7 @@ class MediaController extends Controller {
                 });
             }
             return res.status(response.statusCode).json(response);
-        }
-        catch (e) {
+        } catch (e) {
             next(e);
         }
     }

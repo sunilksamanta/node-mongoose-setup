@@ -4,9 +4,9 @@ const express = require('express');
 const router = express.Router();
 const AuthController = require('../controllers/AuthController');
 
-router.get('/:id', AuthController.checkLogin,MediaController.get);
+router.get('/:id', AuthController.checkLogin, MediaController.get);
 router.post('/', [AuthController.checkLogin, MediaController.upload.single('file')], MediaController.insert);
-router.delete('/:id', AuthController.checkLogin,MediaController.delete);
+router.delete('/:id', AuthController.checkLogin, MediaController.delete);
 
 
 module.exports = router;

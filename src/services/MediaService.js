@@ -2,9 +2,9 @@
 const {Service} = require('./Service');
 
 class MediaService extends Service {
-  constructor(model) {
-    super(model);
-  }
+    constructor(model) {
+        super(model);
+    }
 
 }
 
