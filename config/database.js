@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const config = require('./config').getConfig();
 
+// Mongo Connection Class
 class Connection {
     constructor() {
         const url = config.MONGO_URL;
