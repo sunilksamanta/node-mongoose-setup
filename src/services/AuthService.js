@@ -105,10 +105,6 @@ class AuthService {
         }
     }
 
-    async updateUser(userId, data) {
-        return await this.userService.update(userId, data);
-    }
-
 }
 
 module.exports = {AuthService};

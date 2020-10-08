@@ -56,6 +56,8 @@ For Register, Login, Logout use these urls —
 
 1. **Auth with JWT & Db Store**
 
+1. **Async/Await support**
+
 1. **User Module**
 
 1. **Post Module** (Sample CRUD)
