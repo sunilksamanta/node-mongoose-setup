@@ -47,8 +47,7 @@ class AuthService {
 
     async register(data) {
         try {
-            let user = await this.userService.insert(data);
-            return new HttpResponse(user);
+            return await this.userService.insert(data);
         } catch (error) {
             throw error;
         }
