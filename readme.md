@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/sunilksamanta/node-mongoose-setup.svg?branch=master)](https://travis-ci.org/sunilksamanta/node-mongoose-setup)
 [![Maintainability](https://api.codeclimate.com/v1/badges/25d8ccce7230ad5eb5c3/maintainability)](https://codeclimate.com/github/sunilksamanta/node-mongoose-setup/maintainability)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsunilksamanta%2Fnode-mongoose-setup.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsunilksamanta%2Fnode-mongoose-setup?ref=badge_shield)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](contributing.md)
 [![GitHub issues](https://img.shields.io/github/issues/sunilksamanta/node-mongoose-setup)](https://github.com/sunilksamanta/node-mongoose-setup/issues)
 [![GitHub stars](https://img.shields.io/github/stars/sunilksamanta/node-mongoose-setup)](https://github.com/sunilksamanta/node-mongoose-setup/stargazers)
@@ -177,6 +178,9 @@ Read the [Contributing guideline](contributing.md).
 
 This project is licensed under the terms of the [MIT](https://choosealicense.com/licenses/mit/) license.
 
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsunilksamanta%2Fnode-mongoose-setup.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsunilksamanta%2Fnode-mongoose-setup?ref=badge_large)
 
 ## Credit
 
