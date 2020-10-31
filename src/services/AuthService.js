@@ -97,7 +97,6 @@ class AuthService {
                 throw error;
             }
         } catch (e) {
-            console.log(e);
             let error = new Error('Invalid Token');
             error.statusCode = 401;
             throw error;

@@ -19,7 +19,9 @@ router.use('*', (req, res, next) => {
 })
 
 router.use((err, req, res, next) => {
-    console.log(err);
+    if(process.env.NODE_ENV !== 'production') {
+        console.error(req.method, req.url, err.statusCode, err.message);
+    }
     const error = new HttpError(err);
     res.status(error.statusCode)
     res.json(error);
