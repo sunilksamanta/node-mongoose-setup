@@ -16,7 +16,7 @@ module.exports.setRoutes = (app) => {
      * API Route.
      * All the API will start with "/api/[MODULE_ROUTE]"
      */
-    app.use('/api', require('../src/routes'));
+    app.use('/api', require('../system/routes'));
 
     /**
      * Serving Static files from uploads directory.
