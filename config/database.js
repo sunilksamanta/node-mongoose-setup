@@ -11,9 +11,9 @@ class Connection {
         mongoose.set("useCreateIndex", true);
         mongoose.set("useUnifiedTopology", true);
         this.connect(url).then(_ => {
-            console.log("Established new connection with url", url);
+            console.log("✔ Database Connected");
         }).catch(err => {
-            console.error('MONGODB ERROR: ', err.message);
+            console.error('✘ MONGODB ERROR: ', err.message);
         })
 
     }
