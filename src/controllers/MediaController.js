@@ -1,15 +1,14 @@
-const {Controller} = require('./Controller');
+const {Controller} = require('../../system/controllers/Controller');
 const {MediaService} = require("./../services/MediaService");
 const {Media} = require("./../models/Media");
 const autoBind = require('auto-bind');
 const multer = require('multer');
 const fs = require('fs');
-const utils = require('../helpers/Utility');
+const utils = require('../../system/helpers/Utility');
 const config = require('../../config/config').getConfig();
 const mediaService = new MediaService(
     new Media().getInstance()
 );
-const path = require('path');
 
 class MediaController extends Controller {
 

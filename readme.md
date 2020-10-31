@@ -119,11 +119,11 @@ For Register, Login, Logout use these urls —
 
 We have 2 base classes — One for Controller and another for Service.
 
-1. **[Controller.js](src/controllers/Controller.js)** 
+1. **[Controller.js](system/controllers/Controller.js)** 
 
 This base controller have the basic CRUD operations. To create a new controller just extend this base Controller class.
 
-2. **[Service.js](src/services/Service.js)**
+2. **[Service.js](system/services/Service.js)**
  
 This is the base Service class which includes the database operations. If you want to change the default behaviour of the services you can update this file.
 

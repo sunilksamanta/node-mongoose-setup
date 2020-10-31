@@ -1,7 +1,7 @@
 'use strict';
 const {UserService} = require('./UserService');
 const autoBind = require('auto-bind');
-const {HttpResponse} = require('../helpers/HttpResponse');
+const {HttpResponse} = require('../../system/helpers/HttpResponse');
 const mongoose = require("mongoose");
 
 class AuthService {

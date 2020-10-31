@@ -1,8 +1,6 @@
 'use strict';
-const {Service} = require('./Service');
-const {User} = require('../models/User');
+const {Service} = require('../../system/services/Service');
 const autoBind = require('auto-bind');
-const {HttpResponse} = require('../helpers/HttpResponse');
 
 class UserService extends Service {
     constructor(model) {

@@ -1,7 +1,5 @@
 const mongoose = require("mongoose");
 const {Schema} = require("mongoose");
-const uniqueValidator = require("mongoose-unique-validator");
-const slugify = require('slugify');
 
 class Media {
 

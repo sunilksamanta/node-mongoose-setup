@@ -1,7 +1,7 @@
 'use strict';
 const express = require('express');
 const router = express.Router();
-const {HttpError} = require('../helpers/HttpError');
+const {HttpError} = require('../../system/helpers/HttpError');
 const packageJson = require('../../package.json');
 
 router.use('/media', require('./media'));

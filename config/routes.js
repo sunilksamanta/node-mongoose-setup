@@ -1,7 +1,7 @@
 'use strict';
 const express = require('express');
 const path = require('path');
-const { HttpError } = require('../src/helpers/HttpError');
+const { HttpError } = require('../system/helpers/HttpError');
 module.exports.setRoutes = (app) => {
 
     /**

@@ -1,4 +1,4 @@
-const {Controller} = require('./Controller');
+const {Controller} = require('../../system/controllers/Controller');
 const {PostService} = require("./../services/PostService");
 const {Post} = require("./../models/Post");
 const autoBind = require('auto-bind');
