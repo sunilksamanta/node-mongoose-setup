@@ -176,7 +176,7 @@ Read the [Contributing guideline](contributing.md).
 
 ## License
 
-This project is licensed under the terms of the [MIT](https://choosealicense.com/licenses/mit/) license.
+This project is licensed under the terms of the [MIT](LICENSE) license.
 
 
 
