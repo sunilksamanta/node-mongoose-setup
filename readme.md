@@ -1,5 +1,6 @@
 ![REST API Setup Nodejs MongoDB](https://dev-to-uploads.s3.amazonaws.com/i/zxvx4pk4tdlqyk1x2a4c.png)
 
+![example workflow name](https://github.com/sunilksamanta/node-mongoose-setup/workflows/Node.js%20CI/badge.svg)
 [![Build Status](https://travis-ci.org/sunilksamanta/node-mongoose-setup.svg?branch=master)](https://travis-ci.org/sunilksamanta/node-mongoose-setup)
 [![Maintainability](https://api.codeclimate.com/v1/badges/25d8ccce7230ad5eb5c3/maintainability)](https://codeclimate.com/github/sunilksamanta/node-mongoose-setup/maintainability)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsunilksamanta%2Fnode-mongoose-setup.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsunilksamanta%2Fnode-mongoose-setup?ref=badge_shield)
@@ -88,16 +89,13 @@ For Register, Login, Logout use these urls —
 │  └─ server.js
 ├─ index.js
 ├─ package.json
+├─ system
 └─ src
   ├─ controllers
   │  ├─ AuthController.js
-  │  ├─ Controller.js
   │  ├─ MediaController.js
   │  └─ PostController.js
   ├─ helpers
-  │  ├─ HttpError.js
-  │  ├─ HttpResponse.js
-  │  └─ Utility.js
   ├─ models
   │  ├─ Auth.js
   │  ├─ Media.js
@@ -105,14 +103,12 @@ For Register, Login, Logout use these urls —
   │  └─ User.js
   ├─ routes
   │  ├─ auth.js
-  │  ├─ index.js
   │  ├─ media.js
   │  └─ post.js
   └─ services
      ├─ AuthService.js
      ├─ MediaService.js
      ├─ PostService.js
-     ├─ Service.js
      └─ UserService.js
 ```
 ## Lets talk about the structure
