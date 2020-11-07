@@ -91,11 +91,11 @@ class AuthService {
             const userFromDb = await this.userService.get(user._id);
             if (userFromDb.data && userFromDb.data.status) {
                 return userFromDb.data;
-            } else {
-                let error = new Error('Invalid Token');
-                error.statusCode = 401;
-                throw error;
-            }
+            } 
+            let error = new Error('Invalid Token');
+            error.statusCode = 401;
+            throw error;
+            
         } catch (e) {
             let error = new Error('Invalid Token');
             error.statusCode = 401;

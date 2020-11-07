@@ -37,14 +37,14 @@ class HttpResponse {
                     if (defaultExcludedItemsFromResponse.includes(key)) {
                         delete data[index][key];
                     }
-                })
-            })
+                });
+            });
         } else if (typeof (data) === 'object') {
             Object.keys(data).forEach(key => {
                 if (defaultExcludedItemsFromResponse.includes(key)) {
                     delete data[key];
                 }
-            })
+            });
         }
         return data;
     }

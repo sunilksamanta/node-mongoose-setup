@@ -69,9 +69,9 @@ class Service {
             let item = await this.model.create(data);
             if (item) {
                 return new HttpResponse(item);
-            } else {
-                throw new Error('Something wrong happened');
-            }
+            } 
+            throw new Error('Something wrong happened');
+            
         } catch (error) {
             throw error;
         }

@@ -38,9 +38,9 @@ class AuthController {
         try {
             let id = req.user._id;
             bcrypt.genSalt(SALT_WORK_FACTOR, async (err, salt) => {
-                if (err) return next(err);
+                if (err) {return next(err);}
                 bcrypt.hash(req.body.password, salt, async (err, hash) => {
-                    if (err) return next(err);
+                    if (err) {return next(err);}
                     let data = {password: hash};
                     const response = await this.service.changePassword(id, data);
                     await res.status(response.statusCode).json(response);

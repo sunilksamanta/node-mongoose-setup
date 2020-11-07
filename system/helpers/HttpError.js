@@ -13,7 +13,7 @@ class HttpError {
         if (typeof (error) === 'string') {
             this.statusCode = 500;
             this.message = error;
-            this.name = "InternalServerError";
+            this.name = 'InternalServerError';
         } else {
             if (error.name === 'ValidationError') {
                 error.statusCode = 422;
@@ -35,7 +35,7 @@ class HttpError {
                     errorName = 'NotFoundError';
                     break;
                 default:
-                    errorName = 'InternalServerError'
+                    errorName = 'InternalServerError';
             }
             this.statusCode = error.statusCode ? error.statusCode : 500;
             this.message = error.message || 'Something wrong!';

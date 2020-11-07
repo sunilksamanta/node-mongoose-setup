@@ -1,6 +1,6 @@
 const {Controller} = require('../../system/controllers/Controller');
-const {MediaService} = require("./../services/MediaService");
-const {Media} = require("./../models/Media");
+const {MediaService} = require('./../services/MediaService');
+const {Media} = require('./../models/Media');
 const autoBind = require('auto-bind');
 const multer = require('multer');
 const fs = require('fs');
@@ -18,10 +18,10 @@ class MediaController extends Controller {
             const dir = config.UPLOAD_PATH;
             fs.exists(dir, exist => {
                 if (!exist) {
-                    return fs.mkdir(dir, error => cb(error, dir))
+                    return fs.mkdir(dir, error => cb(error, dir));
                 }
-                return cb(null, dir)
-            })
+                return cb(null, dir);
+            });
         },
         filename: function (req, file, cb) {
             let fileOriginalName = utils.slugify(file.originalname);
@@ -43,7 +43,7 @@ class MediaController extends Controller {
     async insert(req, res, next) {
         try {
             const uploadPath = config.UPLOAD_PATH;
-            req.file.path = req.file.path.split(uploadPath + "/")[1]
+            req.file.path = req.file.path.split(uploadPath + '/')[1];
             const response = await this.service.insert(req.file);
             return res.status(response.statusCode).json(response);
         } catch (e) {
@@ -66,13 +66,13 @@ class MediaController extends Controller {
             const response = await this.service.delete(id);
             // File Unlinking..
             if (response.data.path) {
-                console.log("unlink item", response.data.path);
+                console.log('unlink item', response.data.path);
                 fs.unlink(response.data.path, function (err) {
                     if (err) {
-                        console.log("error deleting file");
+                        console.log('error deleting file');
                         throw err;
                     }
-                    console.log("File deleted!");
+                    console.log('File deleted!');
                 });
             }
             return res.status(response.statusCode).json(response);

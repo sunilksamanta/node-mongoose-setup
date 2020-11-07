@@ -1,0 +1,29 @@
+{
+    "env": {
+        "commonjs": true,
+        "node": true,
+        "es6": true
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 8
+    },
+    "rules": {
+        "semi": "error",
+        "camelcase": [ 2, { "properties": "always" } ],
+        "comma-spacing": [ 2, { "before": false, "after": true } ],
+        "quotes": [2, "single", { "avoidEscape": true }],
+        "func-style": [ 2, "expression" ],
+        "indent": [ 2, 4, { "SwitchCase": 1 } ],
+        "no-invalid-regexp": 2,
+        "no-irregular-whitespace": 2,
+        "no-negated-in-lhs": 2,
+        "no-unreachable": 2,
+        "use-isnan": 2,
+        "valid-typeof": 2,
+        "block-scoped-var": 2,
+        "curly": 2,
+        "default-case": 2,
+        "no-else-return": 2
+    }
+}
