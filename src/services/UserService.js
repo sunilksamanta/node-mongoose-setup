@@ -1,20 +1,20 @@
 'use strict';
-const {Service} = require('../../system/services/Service');
-const autoBind = require('auto-bind');
+const { Service } = require( '../../system/services/Service' );
+const autoBind = require( 'auto-bind' );
 
 class UserService extends Service {
-    constructor(model) {
-        super(model);
+    constructor( model ) {
+        super( model );
         this.model = model;
-        autoBind(this);
+        autoBind( this );
     }
 
 
-    async updatePassword(id, data) {
+    async updatePassword( id, data ) {
         try {
-            let item = await this.model.findByIdAndUpdate(id, data, {new: true});
-            return {passwordChanged: true};
-        } catch (errors) {
+            await this.model.findByIdAndUpdate( id, data, { 'new': true } );
+            return { 'passwordChanged': true };
+        } catch ( errors ) {
             throw errors;
         }
     }
@@ -25,9 +25,9 @@ class UserService extends Service {
      * @param includePassword : boolean
      * @returns {Promise<*>}
      */
-    async findByEmail(email, includePassword = false) {
-        return includePassword ? this.model.findByEmail(email).select('+password') : this.model.findByEmail(email);
+    async findByEmail( email, includePassword = false ) {
+        return includePassword ? this.model.findByEmail( email ).select( '+password' ) : this.model.findByEmail( email );
     }
 }
 
-module.exports = {UserService};
+module.exports = { UserService };

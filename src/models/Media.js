@@ -1,39 +1,39 @@
-const mongoose = require('mongoose');
-const {Schema} = require('mongoose');
+const mongoose = require( 'mongoose' );
+const { Schema } = require( 'mongoose' );
 
 class Media {
 
     initSchema() {
-        const schema = new Schema({
-            originalname: {
-                type: String,
-                required: false,
+        const schema = new Schema( {
+            'originalname': {
+                'type': String,
+                'required': false,
             },
-            encoding: {
-                type: String,
-                required: false,
+            'encoding': {
+                'type': String,
+                'required': false,
             },
-            mimetype: {
-                type: String,
-                required: false,
+            'mimetype': {
+                'type': String,
+                'required': false,
             },
-            filename: {
-                type: String,
-                required: false,
+            'filename': {
+                'type': String,
+                'required': false,
             },
-            path: {
-                type: String,
-                required: false,
+            'path': {
+                'type': String,
+                'required': false,
             },
-            size: {
-                type: Number,
-                required: false,
+            'size': {
+                'type': Number,
+                'required': false,
             }
-        }, {timestamps: true});
+        }, { 'timestamps': true } );
 
         try {
-            mongoose.model('media', schema);
-        } catch (e) {
+            mongoose.model( 'media', schema );
+        } catch ( e ) {
 
         }
 
@@ -41,8 +41,8 @@ class Media {
 
     getInstance() {
         this.initSchema();
-        return mongoose.model('media');
+        return mongoose.model( 'media' );
     }
 }
 
-module.exports = {Media};
+module.exports = { Media };

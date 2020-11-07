@@ -9,19 +9,19 @@ class HttpError {
      * @author Sunil Kumar Samanta
      * @param error
      */
-    constructor(error) {
-        if (typeof (error) === 'string') {
+    constructor( error ) {
+        if ( typeof ( error ) === 'string' ) {
             this.statusCode = 500;
             this.message = error;
             this.name = 'InternalServerError';
         } else {
-            if (error.name === 'ValidationError') {
+            if ( error.name === 'ValidationError' ) {
                 error.statusCode = 422;
             }
 
             let errorName = 'InternalServerError';
 
-            switch (error.statusCode) {
+            switch ( error.statusCode ) {
                 case 422:
                     errorName = 'ValidationError';
                     break;
@@ -45,4 +45,4 @@ class HttpError {
     }
 }
 
-module.exports = {HttpError};
+module.exports = { HttpError };

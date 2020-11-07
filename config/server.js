@@ -1,21 +1,23 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const helmet = require('helmet');
-const server = express();
-const {setRoutes} = require('./routes');
+const express = require( 'express' );
+const bodyParser = require( 'body-parser' );
+const helmet = require( 'helmet' ),
+    server = express();
+const { setRoutes } = require( './routes' );
 // For security
-server.use(helmet());
 
-const cors = require('cors');
-// Allow Origins according to your need.
-const corsOptions = {
-    origin: '*'
-};
-server.use(cors(corsOptions));
+server.use( helmet() );
 
-server.use(bodyParser.json());
+const cors = require( 'cors' ),
+    // Allow Origins according to your need.
+    corsOptions = {
+        'origin': '*'
+    };
+
+server.use( cors( corsOptions ) );
+
+server.use( bodyParser.json() );
 
 // Setting up Routes
-setRoutes(server);
+setRoutes( server );
 
-module.exports = {server};
+module.exports = { server };

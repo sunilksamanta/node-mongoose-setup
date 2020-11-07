@@ -1,11 +1,11 @@
 'use strict';
-const {Service} = require('../../system/services/Service');
+const { Service } = require( '../../system/services/Service' );
 
 class PostService extends Service {
-    constructor(model) {
-        super(model);
+    constructor( model ) {
+        super( model );
     }
 
 }
 
-module.exports = {PostService};
+module.exports = { PostService };
