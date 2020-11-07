@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
-const {Schema} = require("mongoose");
-const uniqueValidator = require("mongoose-unique-validator");
+const mongoose = require('mongoose');
+const {Schema} = require('mongoose');
+const uniqueValidator = require('mongoose-unique-validator');
 const slugify = require('slugify');
 
 class Post {
@@ -25,18 +25,18 @@ class Post {
                 required: true,
             }
         }, {timestamps: true});
-        schema.pre("save", function (next) {
+        schema.pre('save', function (next) {
             let post = this;
-            if (!post.isModified("title")) {
+            if (!post.isModified('title')) {
                 return next();
             }
-            post.slug = slugify(post.title, "_");
+            post.slug = slugify(post.title, '_');
             console.log('set slug', post.slug);
             return next();
         });
         schema.plugin(uniqueValidator);
         try {
-            mongoose.model("post", schema);
+            mongoose.model('post', schema);
         } catch (e) {
 
         }
@@ -45,7 +45,7 @@ class Post {
 
     getInstance() {
         this.initSchema();
-        return mongoose.model("post");
+        return mongoose.model('post');
     }
 }
 

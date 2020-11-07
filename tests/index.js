@@ -5,9 +5,9 @@ const {server} = require('../index');
 // Configure chai
 chai.use(chaiHttp);
 chai.should();
-describe("Basic Routes Testing", () => {
+describe('Basic Routes Testing', () => {
     // Test to get welcome route
-    it("should return 200 status", (done) => {
+    it('should return 200 status', (done) => {
         chai.request(server)
             .get('/')
             .end((err, res) => {
@@ -16,7 +16,7 @@ describe("Basic Routes Testing", () => {
             });
     });
     // Test to get api base route
-    it("should return 200 status", (done) => {
+    it('should return 200 status', (done) => {
         chai.request(server)
             .get('/api/')
             .end((err, res) => {

@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
-const {Schema} = require("mongoose");
-const uniqueValidator = require("mongoose-unique-validator");
+const mongoose = require('mongoose');
+const {Schema} = require('mongoose');
+const uniqueValidator = require('mongoose-unique-validator');
 const bcrypt = require('bcrypt');
 const SALT_WORK_FACTOR = 10;
 
@@ -75,7 +75,7 @@ class User {
         };
         schema.plugin(uniqueValidator);
         try {
-            mongoose.model("user", schema);
+            mongoose.model('user', schema);
         } catch (e) {
 
         }
@@ -84,7 +84,7 @@ class User {
 
     getInstance() {
         this.initSchema();
-        return mongoose.model("user");
+        return mongoose.model('user');
     }
 }
 

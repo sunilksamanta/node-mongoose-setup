@@ -1,6 +1,6 @@
 const {Controller} = require('../../system/controllers/Controller');
-const {PostService} = require("./../services/PostService");
-const {Post} = require("./../models/Post");
+const {PostService} = require('./../services/PostService');
+const {Post} = require('./../models/Post');
 const autoBind = require('auto-bind');
 const postService = new PostService(
     new Post().getInstance()

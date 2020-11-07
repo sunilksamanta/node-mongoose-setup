@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
-const {Schema} = require("mongoose");
-const jwt = require("jsonwebtoken")
+const mongoose = require('mongoose');
+const {Schema} = require('mongoose');
+const jwt = require('jsonwebtoken');
 const config = require('../../config/config').getConfig();
 const jwtKey = config.JWT_SECRET;
 const jwtExpirySeconds = 172800;
@@ -29,14 +29,14 @@ class Auth {
                     name: user.name,
                     role: user.role
                 }, jwtKey, {
-                    algorithm: "HS256",
+                    algorithm: 'HS256',
                     expiresIn: jwtExpirySeconds,
-                })
+                });
                 return token;
             } catch (e) {
                 throw e;
             }
-        }
+        };
 
         schema.statics.decodeToken = async function (token) {
             // Create a new token with the user details
@@ -45,9 +45,9 @@ class Auth {
             } catch (e) {
                 throw e;
             }
-        }
+        };
         try {
-            mongoose.model("auth", schema);
+            mongoose.model('auth', schema);
         } catch (e) {
 
         }
@@ -56,7 +56,7 @@ class Auth {
 
     getInstance() {
         this.initSchema();
-        return mongoose.model("auth");
+        return mongoose.model('auth');
     }
 }
 

@@ -2,7 +2,7 @@
 const {UserService} = require('./UserService');
 const autoBind = require('auto-bind');
 const {HttpResponse} = require('../../system/helpers/HttpResponse');
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 class AuthService {
     constructor(model, userModel) {
@@ -35,7 +35,7 @@ class AuthService {
                     throw error;
                 }
                 const token = await this.model.generateToken(user);
-                await this.model.create({token, user: new mongoose.mongo.ObjectId(user._id)})
+                await this.model.create({token, user: new mongoose.mongo.ObjectId(user._id)});
                 const tokenData = await this.model.findOne({token: token}).populate('user');
                 return new HttpResponse(tokenData);
             } catch (e) {

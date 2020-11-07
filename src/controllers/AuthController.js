@@ -1,6 +1,6 @@
-const {AuthService} = require("./../services/AuthService");
-const {Auth} = require("./../models/Auth");
-const {User} = require("./../models/User");
+const {AuthService} = require('./../services/AuthService');
+const {Auth} = require('./../models/Auth');
+const {User} = require('./../models/User');
 const autoBind = require('auto-bind');
 const bcrypt = require('bcrypt');
 const SALT_WORK_FACTOR = 10;
@@ -41,7 +41,7 @@ class AuthController {
                 if (err) return next(err);
                 bcrypt.hash(req.body.password, salt, async (err, hash) => {
                     if (err) return next(err);
-                    let data = {password: hash}
+                    let data = {password: hash};
                     const response = await this.service.changePassword(id, data);
                     await res.status(response.statusCode).json(response);
                 });

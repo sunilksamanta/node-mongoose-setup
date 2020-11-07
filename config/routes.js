@@ -31,5 +31,5 @@ module.exports.setRoutes = (app) => {
         const error = new Error('Requested path does not exist.');
         error.statusCode = 404;
         res.status(error.statusCode).json(new HttpError(error));
-    })
+    });
 };

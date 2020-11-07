@@ -1,15 +1,15 @@
-const express = require("express");
-const bodyParser = require("body-parser");
+const express = require('express');
+const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const server = express();
-const {setRoutes} = require("./routes");
+const {setRoutes} = require('./routes');
 // For security
-server.use(helmet())
+server.use(helmet());
 
 const cors = require('cors');
 // Allow Origins according to your need.
 const corsOptions = {
-    origin: "*"
+    origin: '*'
 };
 server.use(cors(corsOptions));
 

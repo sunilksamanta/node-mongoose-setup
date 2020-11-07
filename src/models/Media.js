@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const {Schema} = require("mongoose");
+const mongoose = require('mongoose');
+const {Schema} = require('mongoose');
 
 class Media {
 
@@ -32,7 +32,7 @@ class Media {
         }, {timestamps: true});
 
         try {
-            mongoose.model("media", schema);
+            mongoose.model('media', schema);
         } catch (e) {
 
         }
@@ -41,7 +41,7 @@ class Media {
 
     getInstance() {
         this.initSchema();
-        return mongoose.model("media");
+        return mongoose.model('media');
     }
 }
 

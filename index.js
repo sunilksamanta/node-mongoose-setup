@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config();
 // Initialize DB Connection
 require('./config/database');
 
@@ -16,8 +16,8 @@ server.listen(PORT).on('error', err => {
     console.error('✘', err.message);
     process.exit(0);
 }).on('listening', _ => {
-    console.log(`✔ Application Started`);
-})
+    console.log('✔ Application Started');
+});
 
 
 module.exports = {server};

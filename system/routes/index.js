@@ -20,13 +20,13 @@ PATHS.forEach(module => {
         moduleMapper.push({
             Module: name,
             Route: `/${pluralize.plural(name)}`
-        })
+        });
     }
 });
 
 
 
-console.table(moduleMapper)
+console.table(moduleMapper);
 
 router.get('/', (req, res, next) => {
     res.json({status: true, message: `Welcome to ${packageJson.name} V ${packageJson.version}`});
@@ -37,14 +37,14 @@ router.use('*', (req, res, next) => {
     let error = new Error('Resource not found');
     error.statusCode = 404;
     next(error);
-})
+});
 
 router.use((err, req, res, next) => {
     if(process.env.NODE_ENV !== 'production') {
         console.error(req.method, req.url, err.statusCode, err.message);
     }
     const error = new HttpError(err);
-    res.status(error.statusCode)
+    res.status(error.statusCode);
     res.json(error);
 });
 module.exports = router;
