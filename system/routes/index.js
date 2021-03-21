@@ -51,5 +51,6 @@ router.use( ( err, req, res, next ) => {
 
     res.status( error.statusCode );
     res.json( error );
+    next();
 } );
 module.exports = router;
