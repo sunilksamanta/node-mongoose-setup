@@ -15,7 +15,7 @@
   "author": "Sunil Kumar Samanta",
   "license": "ISC",
   "dependencies": {
-    "async": "^3.2.0",
+    "async": "^3.2.2",
     "auto-bind": "^4.0.0",
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
